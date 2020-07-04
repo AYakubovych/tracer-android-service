@@ -1,4 +1,4 @@
-package ddns.net.tracerandroidservice.util;
+package ddns.net.tracerandroidservice.util.payloads;
 
 import com.sun.istack.NotNull;
 

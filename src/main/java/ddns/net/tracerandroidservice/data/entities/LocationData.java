@@ -1,7 +1,7 @@
 package ddns.net.tracerandroidservice.data.entities;
 
 
-import ddns.net.tracerandroidservice.util.LocationMessage;
+import ddns.net.tracerandroidservice.util.payloads.LocationMessage;
 
 import javax.persistence.*;
 import java.io.Serializable;

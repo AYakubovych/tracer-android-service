@@ -2,8 +2,8 @@ package ddns.net.tracerandroidservice.web;
 
 import ddns.net.tracerandroidservice.data.entities.Target;
 import ddns.net.tracerandroidservice.data.service.TargetService;
-import ddns.net.tracerandroidservice.util.TargetCredentialPayload;
-import ddns.net.tracerandroidservice.util.TargetDataPayload;
+import ddns.net.tracerandroidservice.util.payloads.TargetCredentialPayload;
+import ddns.net.tracerandroidservice.util.payloads.TargetDataPayload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +18,9 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/android")
-public class AndroidController {
+public class AuthController {
 
-    private Logger logger = LoggerFactory.getLogger(AndroidController.class);
+    private Logger logger = LoggerFactory.getLogger(AuthController.class);
 
     private TargetService targetService;
 
