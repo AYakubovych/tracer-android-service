@@ -17,6 +17,7 @@ public class LocationMessage implements Serializable {
                 this.latitude = latitude;
                 this.longitude = longitude;
     }
+    public LocationMessage(){}
 
     public long getId() {
         return id;

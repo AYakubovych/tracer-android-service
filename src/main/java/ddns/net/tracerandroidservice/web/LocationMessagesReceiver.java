@@ -18,12 +18,14 @@ public class LocationMessagesReceiver {
     private LocationDataService locationDataService;
 
     @RabbitListener(queues = Constants.queueName)
-    public void receiveMessage(LocationMessage customMessage) {
+    public void receiveMessage(LocationMessage locationMessage) {
 
-        LocationData locationData = new LocationData(customMessage);
+        System.out.println(locationMessage);
+
+        LocationData locationData = new LocationData(locationMessage);
 
         locationData = locationDataService.save(locationData);
-        logger.error("Location saved,id :" + locationData.getId());
+        logger.info("Location saved,id :" + locationData.getId());
     }
 
     @Autowired

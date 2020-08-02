@@ -1,28 +1,40 @@
 package ddns.net.tracerandroidservice.util.payloads;
 
-import com.sun.istack.NotNull;
+import ddns.net.tracerandroidservice.data.entities.Target;
 
-import javax.validation.constraints.Email;
+public class SignUpRequest {
 
-public class TargetDataPayload {
+    private long id;
 
-    @NotNull
-    @Email
     private String email;
 
-    @NotNull
     private String password;
 
-    @NotNull
     private String firstName;
 
-    @NotNull
     private String lastName;
 
-    @NotNull
     private String phone;
 
-    public TargetDataPayload(){}
+    public SignUpRequest() {
+    }
+
+    public SignUpRequest(Target target){
+        this.email = target.getEmail();
+        this.firstName = target.getName();
+        this.id = target.getId();
+        this.lastName = target.getSurname();
+        this.phone = target.getPhone();
+        this.password = target.getPass();
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getEmail() {
         return email;
@@ -64,3 +76,4 @@ public class TargetDataPayload {
         this.phone = phone;
     }
 }
+

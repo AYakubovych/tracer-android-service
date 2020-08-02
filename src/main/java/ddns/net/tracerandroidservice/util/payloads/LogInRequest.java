@@ -1,15 +1,26 @@
 package ddns.net.tracerandroidservice.util.payloads;
 
-import com.sun.istack.NotNull;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 
-public class TargetCredentialPayload {
+public class LogInRequest {
 
-    @NotNull
+    private long id;
+
+    @Email
     private String email;
     @NotNull
     private String password;
 
-    public TargetCredentialPayload(){}
+    public LogInRequest(){}
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getEmail() {
         return email;
